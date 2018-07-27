@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo|Source+Sans+Pro');
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$aa-blue: #211f5f;
+$aa-tan: #ffc870;
+$aa-light-tan: #fff6dd;
+$aa-red:#7d1619;
+
+$arvo-font-stack: 'Arvo', serif;
+$ssp-font-stack: 'Source Sans Pro', sans-serif;
+
+.arvo {
+    font-family: $arvo-font-stack;
+}
+
+.ssp {
+    font-family: $ssp-font-stack;
+}
+
+.navbar-aa {
+    font-family: $ssp-font-stack;
+    background-color: $aa-tan;
+    * {
+        color: $aa-blue;
+    }
+    
+    li {
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+    ul:last-child {
+        padding-right: 20px;
+    }
+    .navbar-collapse {
+        padding-bottom: 5px;
+    }
+    .nav-link:hover, .dropdown-item:hover {
+        background: none;
+        color: $aa-red;
+    }
+    .navbar-brand {
+        font-size: 24px;
+    }
+    .nav-link {
+        font-size: 18px;
+    }
+    @include media-breakpoint-down(lg) {
+        .navbar-collapse {
+            background-color: $aa-light-tan;
+            padding-bottom: 10px;
+        }
+        .dropdown-menu {
+            background: none;
+            border: 0px;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .dropdown-menu {
+            background-color: $aa-light-tan;
+            border-radius: 0px;
+            border: none;
+        }
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: $aa-light-tan;
+}
+
+.full-height {
+    min-height: 100%;
+    height: 100%;
+}
+
+.tri-container {
+    background-image: url("../img/header_bg.png");
+    background-repeat: no-repeat;
+}
+
+.tri-box {
+    border: 1px solid transparent;
+    width: 600px;
+    height: 600px;
+    position: relative;
+    .tri-btn {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        background-color: $aa-blue;
+        color: white !important;
+        border: none;
+        transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        padding-top: 100px - 24px + 3px;
+        font-size: 24px;
+        span {
+            text-shadow: 0px 0px 5px black;
+        }
+        box-shadow: 0px 0px 10px gray;
+    }
+    .tri-btn:hover {
+        -ms-transform: scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+    svg {
+        line {
+            stroke: $aa-blue;
+            stroke-width: 2;
+        }
+        top: 0px;
+        left: 0px;
+    }
+    #tri-btn-1 {
+        left: 120px - 100px;
+        top: 300px - 100px;
+        background-image: url("../img/campus1.jpg");
+    }
+    #tri-btn-2 {
+        left: 480px - 100px;
+        top: 120px - 100px;
+        background-image: url("../img/campus2.jpg");
+    }
+    #tri-btn-3 {
+        left: 420px - 100px;
+        top: 480px - 100px;
+        background-image: url("../img/campus3.jpg");
+    }
+}
